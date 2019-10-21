@@ -1,0 +1,34 @@
+Pasos para crear app con react
+
+Instalar react native cli
+npm install react-native-cli -g
+
+Crear un proyecto
+React-native init nombre del proyecto —version  — save
+
+Correr en android
+Crear un archivo local.properties en la carpeta android y adjuntar lo siguiente:
+sdk.dir = /Users/macminisistemas/Library/Android/sdk/
+///Depende la ruta del sdk)
+
+Pasos para ejecutar react native en un dispositivo 
+
+Ejecutar ./adb devices en la ruta : android/sdk/platforms-tools
+Muestra la lista de dispostivos, cambiar el puerto de ejecución al 8081 con el comando:
+./adb reverse tcp:8081 tcp:8081
+Ejecutar el comando react-native start
+Ejecutar react-native run-android  (ejecuta como administrador)
+
+Añadir contador fecha
+npm install react-native-countdown-component --save
+
+npm install react-native-moment --save
+
+Añadir Api voice
+npm i react-native-voice --save
+
+Añadir link native module
+react-native link react-native-voice
+
+Añadir permisos para grabar audio en el AndroidManifest.xml
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
